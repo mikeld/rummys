@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pamplona Secreta: La Ginkana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pamplona-red': '#C8102E',
+            'pamplona-dark': '#1a202c',
+            'pamplona-light': '#f7fafc',
+            'pamplona-gray': '#2d3748',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.16/24/outline/academic-cap.svg" rel="stylesheet">
+    <style>
+    body {
+      scroll-behavior: smooth;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cardEnter {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.95); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+      }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    .animate-card-enter {
+      opacity: 0; /* Start hidden */
+      animation: cardEnter 0.6s ease-out forwards;
+    }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gradient-to-br from-pamplona-dark via-pamplona-dark to-pamplona-gray text-pamplona-light">
+<div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
